@@ -10,6 +10,10 @@
   justify-content: space-between;
 }
 
+h1{
+  text-align: center;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -19,7 +23,7 @@ form {
 
 button {
   background-color: #c0c0c0;
-  border: 1px solid #d0d0d0;
+  border: none;
   border-radius: .4rem;
   margin: .5rem .25rem;
   padding: .5rem;
@@ -34,10 +38,14 @@ button:hover {
 
 .btn-edit {
   background-color: #0c0;
+  font-weight: bold;
+  color: #fff;
 }
 
 .btn-delete {
   background-color: #c00;
+  color: #fff;
+  font-weight: bold;
 }
 
 

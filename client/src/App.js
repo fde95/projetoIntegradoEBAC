@@ -6,6 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import MuiAppBar from '@mui/material/AppBar';
+import Container from '@mui/material/Container';
 
 const mdTheme = createTheme();
 
@@ -27,16 +28,21 @@ const AppBar = styled(MuiAppBar, {
 function App() {
   return (
     <ThemeProvider theme={mdTheme}>
-      <Box sx={{ display: 'flex' }}>
-        <CssBaseline />
+      <Box sx={{ display: 'flex', }}>
+      <Container>
+      <CssBaseline />
         <AppBar position="absolute">
+          <Container>
           <Toolbar
             sx={{
-              pr: '24px', // keep right padding when drawer closed
-            }}
-          ><h1>Cadastro de imóveis</h1></Toolbar>
+              pr: '24px',
+            }}>
+              <h1>Cadastro de Imóveis</h1>
+          </Toolbar>
+          </Container>
         </AppBar>
         <Properties />
+      </Container>
       </Box>
     </ThemeProvider>
   );

@@ -101,9 +101,14 @@ export default class Properties extends Component {
     getListItem(response){
 
         return (
-            <ListItem  
+                <ListItem 
                 alignItems="flex-start"
-                key={response._id}>
+                key={response._id} sx={{
+                    display: 'block',
+                    backgroundColor: '#1976d2',
+                    marginBottom: '64px',
+                    borderRadius: '8px'
+                }}>
                     <ListItemAvatar>
                         <Avatar alt="Foto" src="https://picsum.photos/200/300?random=1" />
                     </ListItemAvatar>
@@ -112,7 +117,7 @@ export default class Properties extends Component {
                             sx={{ display: 'inline' }}
                             component="span"
                             variant="body2"
-                            color="text.primary"
+                            color="#fff"
                         >
                             <Tooltip title={ response.type }>
                                 <h3>{response.title}</h3> 
@@ -193,7 +198,7 @@ export default class Properties extends Component {
                 />
 
                 <Stack spacing={2} direction="row">
-                    <Button variant="outlined"
+                    <Button variant="contained"
                         onClick={ e => this.save(e)}>
                         Salvar
                     </Button>
